@@ -37,7 +37,9 @@ class SplashPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Lottie.network(
-              'https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json'),
+            'https://raw.githubusercontent.com/uzidreamcode/slicing_swastamita/refs/heads/main/asset/intro.json',
+            repeat: true,
+          ),
           const SizedBox(height: 20.0),
           const SizedBox(height: 20.0),
           Row(
