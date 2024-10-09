@@ -30,7 +30,7 @@ class _DashboardPageState extends State<DashboardPage> {
           child: Column(
             children: [
               const BannerImage(),
-              const SizedBox(height: 20.0),
+              // const SizedBox(height: 20.0),
               const SearchBox(),
               const SizedBox(height: 20.0),
               const SizedBox(height: 20.0),
