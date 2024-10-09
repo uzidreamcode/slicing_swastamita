@@ -3,6 +3,7 @@ import 'package:slicing_swastamita/core/components/buildBannerImage.dart';
 import 'package:slicing_swastamita/core/components/categories.dart';
 import 'package:slicing_swastamita/core/components/searchbox.dart';
 import 'package:slicing_swastamita/core/components/special.dart';
+import 'package:slicing_swastamita/core/components/top.dart';
 import 'package:slicing_swastamita/core/constants/colors.dart';
 // import 'package:slicing_swastamita/presentation/widgets/banner_image.dart';
 // import 'package:slicing_swastamita/presentation/widgets/search_box.dart';
@@ -37,6 +38,8 @@ class _DashboardPageState extends State<DashboardPage> {
               const SpecialForYou(),
               const SizedBox(height: 20.0),
               const CategoriesSection(),
+              const SizedBox(height: 20.0),
+              const Top(),
             ],
           ),
         ),
