@@ -51,7 +51,7 @@ class _TopState extends State<Top> {
                 child: Container(
                   margin: EdgeInsets.only(right: 10.8),
                   width: 333.6,
-                  height: 100.4,
+                  height: 218.4,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(9.6),
                     image: const DecorationImage(

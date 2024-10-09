@@ -15,11 +15,10 @@ class _ChoiseState extends State<Choise> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          Colors.grey.shade100, // Menyesuaikan warna latar belakang
+      backgroundColor: Colors.grey.shade100,
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
               children: [
@@ -50,57 +49,68 @@ class _ChoiseState extends State<Choise> {
                 ),
               ],
             ),
-            Image.network(
-              "https://i.ibb.co.com/dMR4XhX/85267952-horizontal-abstract-banners-of-hills-of-coniferous-wood.png",
-              height: 500,
-              fit: BoxFit.cover,
+            // Stack untuk mengawang gambar dan tombol
+            Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                SizedBox(
+                  height: 500,
+                  width: double.infinity,
+                ),
+                Image.network(
+                  "https://i.ibb.co.com/dMR4XhX/85267952-horizontal-abstract-banners-of-hills-of-coniferous-wood.png",
+                  height: 500,
+                  fit: BoxFit.cover,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          side: BorderSide(color: Colors.green.shade700),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
+                          minimumSize: Size(double.infinity, 50),
+                        ),
+                        onPressed: () {
+                          context.goNamed(RouteConstants.login);
+                        },
+                        child: Text(
+                          "Sign In",
+                          style: TextStyle(
+                            color: Colors.green.shade700,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 12),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          side: BorderSide(color: Colors.black),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
+                          minimumSize: Size(double.infinity, 50),
+                        ),
+                        onPressed: () {
+                          // Aksi untuk tombol Create New Account
+                        },
+                        child: Text(
+                          "Create New Account",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              child: Column(
-                children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      side: BorderSide(color: Colors.green.shade700),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                      minimumSize: Size(double.infinity, 50),
-                    ),
-                    onPressed: () {
-                      context.goNamed(RouteConstants.login);
-                    },
-                    child: Text(
-                      "Sign In",
-                      style: TextStyle(
-                        color: Colors.green.shade700,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 12),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      side: BorderSide(color: Colors.black),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                      minimumSize: Size(double.infinity, 50),
-                    ),
-                    onPressed: () {
-                      // Aksi untuk tombol Create New Account
-                    },
-                    child: Text(
-                      "Create New Account",
-                      style: TextStyle(
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            )
           ],
         ),
       ),
