@@ -9,6 +9,10 @@ class RouteConstants {
   static const String login = 'login';
   static const String loginPath = '/login';
 
+  /// route for page [Choise]
+  static const String choisePath = '/choise';
+  static const String choise = 'choise';
+
   /// route for page [RegisterPage]
   static const String register = 'register';
   static const String registerPath = 'register';

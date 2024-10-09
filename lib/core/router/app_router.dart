@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:slicing_swastamita/presentation/auth/pages/login_page.dart';
+import 'package:slicing_swastamita/presentation/home/pages/dashboard_page.dart';
+import 'package:slicing_swastamita/presentation/intro/choise.dart';
 import '../../presentation/intro/splash_page.dart';
 
 part 'route_constants.dart';
@@ -10,7 +12,7 @@ part 'models/path_parameters.dart';
 
 class AppRouter {
   final router = GoRouter(
-    initialLocation: RouteConstants.splashPath,
+    initialLocation: RouteConstants.rootPath,
     routes: [
       GoRoute(
         name: RouteConstants.splash,
@@ -34,6 +36,43 @@ class AppRouter {
           // ),
         ],
       ),
+
+      GoRoute(
+        name: RouteConstants.choise,
+        path: RouteConstants.choisePath,
+        builder: (context, state) => const Choise(),
+        routes: [
+          // GoRoute(
+          //   name: RouteConstants.verification,
+          //   path: RouteConstants.verificationPath,
+          //   builder: (context, state) => const VerificationPage(),
+          // ),
+          // GoRoute(
+          //   name: RouteConstants.register,
+          //   path: RouteConstants.registerPath,
+          //   builder: (context, state) => const RegisterPage(),
+          // ),
+        ],
+      ),
+
+      GoRoute(
+        name: RouteConstants.root,
+        path: RouteConstants.rootPath,
+        builder: (context, state) => const DashboardPage(),
+        routes: [
+          // GoRoute(
+          //   name: RouteConstants.verification,
+          //   path: RouteConstants.verificationPath,
+          //   builder: (context, state) => const VerificationPage(),
+          // ),
+          // GoRoute(
+          //   name: RouteConstants.register,
+          //   path: RouteConstants.registerPath,
+          //   builder: (context, state) => const RegisterPage(),
+          // ),
+        ],
+      ),
+
       // GoRoute(
       //     name: RouteConstants.root,
       //     path: RouteConstants.rootPath,

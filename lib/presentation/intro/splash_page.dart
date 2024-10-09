@@ -11,9 +11,9 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(
-      const Duration(minutes: 10),
+      const Duration(seconds: 3),
       () => context.goNamed(
-        RouteConstants.login,
+        RouteConstants.choise,
         // pathParameters: PathParameters().toMap(),
       ),
     );
@@ -39,12 +39,20 @@ class SplashPage extends StatelessWidget {
               "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRbLZIMTyhbZ2gZANmBOksR_5hFuaqYkPdt9wIxIKkJEurmeh7H"),
           const SizedBox(height: 20.0),
           const SizedBox(height: 20.0),
-          Text(
-            'Loading...',
-            style: TextStyle(
-              color: AppColors.grey,
-              fontWeight: FontWeight.w600,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Swasta",
+                  style: TextStyle(
+                      color: AppColors.black,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold)),
+              Text("Mita",
+                  style: TextStyle(
+                      color: AppColors.primary,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold)),
+            ],
           )
         ],
       ),
