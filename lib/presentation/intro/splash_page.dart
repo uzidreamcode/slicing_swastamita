@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:lottie/lottie.dart';
 
 // import '../../core/core.dart';
 import '../../core/router/app_router.dart';
@@ -11,7 +12,7 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(
-      const Duration(seconds: 3),
+      const Duration(seconds: 3600),
       () => context.goNamed(
         RouteConstants.choise,
         // pathParameters: PathParameters().toMap(),
@@ -35,8 +36,8 @@ class SplashPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.network(
-              "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRbLZIMTyhbZ2gZANmBOksR_5hFuaqYkPdt9wIxIKkJEurmeh7H"),
+          Lottie.network(
+              'https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json'),
           const SizedBox(height: 20.0),
           const SizedBox(height: 20.0),
           Row(

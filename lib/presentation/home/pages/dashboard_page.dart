@@ -22,7 +22,20 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("SwastaMita", style: TextStyle(color: Colors.black)),
+        title: Row(
+          children: const [
+            Text(
+              "Swasta",
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              "Mita",
+              style: TextStyle(
+                  color: AppColors.primary, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
         centerTitle: false,
       ),
       body: SafeArea(
