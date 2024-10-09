@@ -9,7 +9,7 @@ class SearchBox extends StatelessWidget {
       height: 60,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 234, 228, 228),
+        color: const Color(0xFFE9F0F8),
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Row(
