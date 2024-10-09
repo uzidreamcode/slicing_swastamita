@@ -12,7 +12,7 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(
-      const Duration(seconds: 3600),
+      const Duration(seconds: 3),
       () => context.goNamed(
         RouteConstants.choise,
         // pathParameters: PathParameters().toMap(),
@@ -37,7 +37,7 @@ class SplashPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Lottie.network(
-            'https://raw.githubusercontent.com/uzidreamcode/slicing_swastamita/refs/heads/main/asset/intro.json',
+            'https://raw.githubusercontent.com/uzidreamcode/slicing_swastamita/refs/heads/main/asset/Travel.json',
             repeat: true,
           ),
           const SizedBox(height: 20.0),
